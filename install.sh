@@ -5,7 +5,8 @@ echo "📦 Installing TikTok US Node Proxy..."
 apt update && apt install -y curl wget unzip
 
 echo "📥 Downloading Clash Meta for Linux..."
-wget -O clash.gz $(curl -s https://api.github.com/repos/MetaCubeX/mihomo/releases/latest | grep browser_download_url | grep linux-amd64.gz | cut -d '"' -f 4)
+wget https://github.com/MetaCubeX/mihomo/releases/latest/download/clash.meta-linux-amd64
+
 
 gunzip clash.gz
 mv clash.meta-linux-amd64 /usr/local/bin/clash
