@@ -5,12 +5,10 @@ echo "📦 Installing TikTok US Node Proxy..."
 apt update && apt install -y curl wget unzip
 
 echo "📥 Downloading Clash Meta for Linux..."
-wget https://github.com/MetaCubeX/mihomo/releases/latest/download/clash.meta-linux-amd64
+wget -O clash.meta https://github.com/MetaCubeX/mihomo/releases/latest/download/clash.meta-linux-amd64
+chmod +x clash.meta
+mv clash.meta /usr/local/bin/clash
 
-
-gunzip clash.gz
-mv clash.meta-linux-amd64 /usr/local/bin/clash
-chmod +x /usr/local/bin/clash
 
 echo "📁 Setting up config directory..."
 mkdir -p /root/.config/clash
